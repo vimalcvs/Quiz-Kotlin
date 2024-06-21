@@ -1,0 +1,17 @@
+<resources>
+
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:windowBackground">@color/color_background</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialog</item>
+        <item name="cardViewStyle">@style/CardViewStyle</item>
+        <item name="popupMenuBackground">@drawable/bg_menu</item>
+
+        <item name="colorAccent">@color/color_icon</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorSurface">@color/color_surface</item>
+    </style>
+
+</resources>

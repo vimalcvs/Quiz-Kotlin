@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_accent">#7E9AFF</color>
+    <color name="color_background">#000000</color>
+    <color name="color_button_active">#7E9AFF</color>
+    <color name="color_button_inactive">#1F7E9AFF</color>
+    <color name="color_card">#1C1C1E</color>
+    <color name="color_clip_active">@color/color_accent</color>
+    <color name="color_clip_inactive">#1F7E9AFF</color>
+    <color name="color_icon">@color/color_accent</color>
+    <color name="color_nav_active">@color/color_accent</color>
+    <color name="color_primary">#131415</color>
+    <color name="color_ripple">#08FFFFFF</color>
+    <color name="color_surface">#1C1C1E</color>
+    <color name="color_toolbar">@color/color_primary</color>
+    <color name="quiz_btn_color_normal">#0AFFFFFF</color>
+    <color name="quiz_btn_color_right">#00D086</color>
+    <color name="quiz_btn_color_wrong">#F32830</color>
+    <color name="text_fifth">#147E9AFF</color>
+    <color name="text_fourth">#40FFFFFF</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#BFFFFFFF</color>
+    <color name="text_third">#80FFFFFF</color>
+
+
+</resources>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_background_sheet">
+
+
+            <TextView
+                android:id="@+id/dialog_category_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:fontFamily="@font/font_medium"
+                android:text="@string/quiz_category"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:background="@drawable/oval_ripple_black"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_oval_close_read"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/font_regular"
+                android:text="@string/select_difficulty"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@+id/dialog_category_text"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_category_text" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/dialog_chip_difficulty_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+
+                app:layout_constraintStart_toStartOf="@+id/dialog_category_text"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:selectionRequired="true"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/dialog_chip_any"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/any"
+                    android:textColor="@color/clip_text"
+                    app:chipBackgroundColor="@color/clip_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/dialog_chip_easy"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/easy"
+                    android:textColor="@color/clip_text"
+                    app:chipBackgroundColor="@color/clip_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/dialog_chip_medium"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/medium"
+                    android:textColor="@color/clip_text"
+                    app:chipBackgroundColor="@color/clip_color" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/dialog_chip_difficult"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hard"
+                    android:textColor="@color/clip_text"
+                    app:chipBackgroundColor="@color/clip_color" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/font_regular"
+                android:text="@string/number_of_questions"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@+id/dialog_category_text"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_chip_difficulty_group" />
+
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:fontFamily="@font/font_regular"
+                android:text="@string/dialog_error_invalid_range"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <EditText
+                android:id="@+id/et_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:layout_margin="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:background="@drawable/shape_edit"
+                android:fontFamily="@font/font_bold"
+                android:gravity="start"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_14"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_14"
+                android:singleLine="true"
+                android:text="@string/number_of_questions"
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_fourth"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_error"
+                tools:ignore="Autofill,LabelFor,TextFields">
+
+                <requestFocus />
+
+            </EditText>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dialog_category_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:foreground="?selectableItemBackground"
+                app:cardBackgroundColor="@color/color_button_active"
+                app:cardCornerRadius="@dimen/dp_25"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_edit_text">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/font_bold"
+                    android:gravity="center"
+                    android:text="@string/start_quiz"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_title"
+                    android:textSize="@dimen/sp_18" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/welcome_arrow_animation"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    app:lottie_autoPlay="true"
+                    app:lottie_imageAssetsFolder="assets/"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/iap" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

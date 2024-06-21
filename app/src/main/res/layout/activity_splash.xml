@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loading_progress"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:visibility="invisible"
+        app:cardBackgroundColor="#1CE8F0FA"
+        app:cardCornerRadius="@dimen/dp_6"
+        app:cardElevation="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/loading"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="match_parent"
+            android:background="@drawable/load_progress"
+            android:visibility="invisible" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/sub_title_tv"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_34"
+        android:layout_marginEnd="@dimen/dp_34"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:fontFamily="@font/font_bold"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.004"
+        android:shadowColor="#33000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="@string/play_to_learn"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_30"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/loading_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_34"
+        android:layout_marginEnd="@dimen/dp_34"
+        android:fontFamily="@font/font_bold"
+        android:gravity="bottom"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.02"
+        android:lines="1"
+        android:shadowColor="#33000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="@string/quizizz"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_55"
+        android:textStyle="italic|bold"
+        app:autoSizeMaxTextSize="@dimen/sp_55"
+        app:autoSizeMinTextSize="@dimen/sp_10"
+
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/sub_title_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

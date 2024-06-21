@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Splash" parent="@style/Theme.Apps">
+        <item name="android:windowSplashScreenAnimationDuration">100</item>
+        <item name="android:windowSplashScreenBackground">@color/color_primary</item>
+
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="android:windowBackground">@drawable/shape_splash_bitmap</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+    </style>
+
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Apps"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2650198364422513~2780435417" />
+
+        <activity
+            android:name=".activity.ActivitySplash"
+            android:exported="true"
+            android:theme="@style/Theme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:theme="@style/Theme.MainActivity"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".activity.ActivityQuizStart"
+            android:theme="@style/Theme.Quiz.Start" />
+
+        <activity
+            android:name=".activity.ActivityQuizResult"
+            android:theme="@style/Theme.Quiz" />
+
+        <activity
+            android:name=".activity.ActivityQuiz"
+            android:theme="@style/Theme.Quiz" />
+
+
+        <activity
+            android:name=".activity.ActivityQuizScore"
+            android:theme="@style/Theme.RecyclerView" />
+
+
+        <activity
+            android:name=".activity.ActivityAppearance"
+            android:theme="@style/Theme.RecyclerView" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+    </application>
+
+</manifest>

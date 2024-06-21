@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_screen_sort"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:layout_width="@dimen/dp_63"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@drawable/icon_share_medal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nv_nested"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ad_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayouts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="?actionBarSize"
+                android:fitsSystemWindows="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_back_home">
+
+                <TextView
+                    android:id="@+id/tv_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/font_bold"
+                    android:gravity="center"
+                    android:text="@string/score"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/sp_22" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_15"
+                android:background="@drawable/shape_quiz_cardview"
+                android:padding="@dimen/dp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/layout_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="@dimen/dp_15"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/color_blue"
+                        android:background="@drawable/gradient_blue"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/animation_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_250"
+                            android:layout_gravity="center_horizontal">
+
+
+                            <ImageView
+                                android:id="@+id/iv_animation"
+                                android:layout_width="@dimen/dp_250"
+                                android:layout_height="@dimen/dp_250"
+                                android:layout_centerHorizontal="true"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/icon_pro_highlight"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/lv_animation_view"
+                                android:layout_width="@dimen/dp_250"
+                                android:layout_height="@dimen/dp_250"
+                                android:layout_gravity="center_horizontal"
+                                android:elevation="@dimen/dp_8"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/winner" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/tv_congratulations"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_5"
+                            android:fontFamily="@font/font_bold"
+                            android:gravity="center"
+                            android:text="@string/congratulations"
+                            android:textColor="@color/text_primary"
+                            android:textSize="@dimen/sp_25" />
+
+                        <TextView
+                            android:id="@+id/tvResultMsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_regular"
+                            android:gravity="center"
+                            android:text="@string/quiz_result_challenge"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/sp_16" />
+
+                        <TextView
+                            android:id="@+id/tv_time_dl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_5"
+                            android:fontFamily="@font/font_regular"
+                            android:gravity="center"
+                            android:text="@string/time_00_23"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/sp_15" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginBottom="@dimen/dp_24"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/font_regular"
+                                    android:gravity="center"
+                                    android:text="@string/correct"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="@dimen/sp_15" />
+
+                                <TextView
+                                    android:id="@+id/txt_dialog_message"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginStart="@dimen/dp_5"
+                                    android:fontFamily="@font/font_bold"
+                                    android:padding="@dimen/dp_5"
+                                    android:text="@string/quiz_thirty"
+                                    android:textColor="#00CC91"
+                                    android:textSize="@dimen/sp_28" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.progressindicator.CircularProgressIndicator
+                                    android:id="@+id/cpi_progress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/oval_bg_surface"
+                                    android:progress="0"
+
+                                    app:indicatorColor="@color/color_button_active"
+                                    app:indicatorDirectionCircular="clockwise"
+                                    app:indicatorSize="@dimen/dp_85"
+                                    app:trackColor="@color/color_button_inactive"
+                                    app:trackCornerRadius="@dimen/dp_30"
+                                    app:trackThickness="@dimen/dp_9" />
+
+                                <TextView
+                                    android:id="@+id/tv_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/font_bold"
+                                    android:text="@string/quiz_thirty"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/text_primary"
+                                    android:textSize="@dimen/sp_33" />
+
+
+                            </RelativeLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/font_regular"
+                                    android:gravity="center"
+                                    android:text="@string/quiz_wrong"
+                                    android:textColor="@color/text_secondary"
+                                    android:textSize="@dimen/sp_15" />
+
+                                <TextView
+                                    android:id="@+id/wrong"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginStart="@dimen/dp_5"
+                                    android:fontFamily="@font/font_bold"
+                                    android:padding="@dimen/dp_5"
+                                    android:text="@string/quiz_thirty"
+                                    android:textColor="#FF6179"
+                                    android:textSize="@dimen/sp_28" />
+
+                            </LinearLayout>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                app:layout_constraintWidth_percent="0.90">
+
+
+                <TextView
+                    android:id="@+id/tv_answer"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:background="@drawable/shape_button_green"
+                    android:fontFamily="@font/font_bold"
+                    android:gravity="center"
+                    android:text="@string/quiz_answer"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_title"
+                    android:textSize="@dimen/sp_18"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_share"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_share"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:background="@drawable/shape_button_yellow"
+                    android:fontFamily="@font/font_bold"
+                    android:gravity="center"
+                    android:text="@string/share"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_title"
+                    android:textSize="@dimen/sp_18"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_answer"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tv_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_18"
+                    android:background="@drawable/shape_button_red"
+                    android:fontFamily="@font/font_bold"
+                    android:gravity="center"
+                    android:text="@string/title_home"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_title"
+                    android:textSize="@dimen/sp_18"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_answer" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/ad_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

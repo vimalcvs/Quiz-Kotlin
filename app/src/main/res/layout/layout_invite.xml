@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_social_media"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_bold"
+        android:padding="@dimen/dp_16"
+        android:text="@string/invite_app"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/sp_18"
+        app:drawableStartCompat="@drawable/ic_home_line"
+        app:drawableTint="@color/color_green"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:cardBackgroundColor="@color/color_card"
+        app:cardCornerRadius="@dimen/dp_16"
+        app:cardElevation="0dp"
+        app:contentPadding="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_social_media">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_guideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.65" />
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_networking"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/gl_guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_bold"
+                android:text="@string/share_invite_app_title"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/sp_17"
+                app:layout_constraintEnd_toStartOf="@+id/gl_guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:fontFamily="@font/font_regular"
+                android:text="@string/share_invite_app_message"
+                android:textColor="@color/text_third"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintEnd_toStartOf="@+id/gl_guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+
+            <TextView
+                android:id="@+id/tv_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_button_active"
+                android:backgroundTint="@color/color_green"
+                android:fontFamily="@font/font_medium"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_35"
+                android:paddingEnd="@dimen/dp_35"
+                android:text="@string/invite_app"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:includeFontPadding="false"
+                android:drawablePadding="@dimen/dp_6"
+                app:drawableStartCompat="@drawable/ic_list_share"
+                app:drawableTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
+                app:layout_constraintWidth_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_20"/>
+</LinearLayout>

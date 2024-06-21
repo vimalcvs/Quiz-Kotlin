@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="navTextViewAppearanceInactive">
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="fontFamily">@font/font_regular</item>
+        <item name="android:fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="navTextViewAppearanceActive">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="fontFamily">@font/font_regular</item>
+        <item name="android:fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:navigationBarColor">@color/color_surface</item>
+        <item name="bottomSheetStyle">@style/BottomSheetModal</item>
+    </style>
+
+    <style name="BottomSheetModal" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <style name="CardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/color_card</item>
+    </style>
+
+
+    <style name="CustomDialog" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:paddingEnd">@dimen/dp_4</item>
+        <item name="android:paddingStart">@dimen/dp_4</item>
+    </style>
+
+
+    <style name="Theme.Splash" parent="@style/Theme.Apps">
+        <item name="android:windowBackground">@drawable/shape_splash_bitmap</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+
+    <style name="Theme.RecyclerView" parent="@style/Theme.Apps">
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="android:windowBackground">@color/color_background</item>
+        <item name="android:statusBarColor">@color/color_primary</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+
+    <style name="Theme.Quiz" parent="@style/Theme.Apps">
+        <item name="android:statusBarColor">@color/color_background</item>
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="android:windowBackground">@color/color_background</item>
+        <item name="android:navigationBarColor">@color/color_background</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">?isLightTheme</item>
+    </style>
+
+
+    <style name="Theme.MainActivity" parent="@style/Theme.Apps">
+        <item name="android:colorBackground">@color/color_surface</item>
+        <item name="android:statusBarColor">@color/color_primary</item>
+        <item name="android:navigationBarColor">@color/color_surface</item>
+    </style>
+
+    <style name="Theme.Quiz.Start" parent="@style/Theme.Apps">
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/color_background</item>
+    </style>
+
+
+</resources>

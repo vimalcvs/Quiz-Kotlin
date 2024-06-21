@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_150"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dp_16"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true">
+
+    <View
+        android:id="@+id/view_background_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.25"
+        android:background="#00CC91" />
+
+    <ImageView
+        android:id="@+id/img_apple_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitEnd"
+        android:src="@drawable/icon_bitmap_apple"
+        app:tint="#00CC91" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:id="@+id/txt_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+
+            android:padding="@dimen/dp_5"
+            android:text="@string/app_name"
+            android:textColor="#ff041e54"
+            android:textSize="@dimen/sp_20"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txt_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:padding="@dimen/dp_5"
+            android:text="@string/percent"
+            android:textColor="#ff041e54"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toTopOf="@+id/tv_total"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_category" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:padding="@dimen/dp_5"
+            android:text="@string/total_question"
+            android:textColor="#ff041e54"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:includeFontPadding="false"
+            android:padding="@dimen/dp_5"
+            android:text="@string/app_name"
+            android:textColor="#b3041e54"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txt_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:padding="@dimen/dp_5"
+
+            android:textColor="#b3041e54"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintBottom_toTopOf="@+id/txt_question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+
+        <TextView
+            android:id="@+id/txt_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_regular"
+            android:padding="@dimen/dp_5"
+
+            android:textColor="#b3041e54"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+
