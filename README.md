@@ -1,0 +1,1 @@
+![plot](./quiz.png)
